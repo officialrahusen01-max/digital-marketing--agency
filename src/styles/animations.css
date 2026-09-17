@@ -1,0 +1,12 @@
+/* Shared keyframes / transition helper classes used across sections */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

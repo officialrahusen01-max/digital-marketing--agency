@@ -1,0 +1,11 @@
+:root {
+  --color-bg: #080909;
+  --color-text: #f7f7f2;
+  --color-muted: #969b92;
+  --color-accent: #d7ff3f;
+
+  --font-primary: "Helvetica Neue", "Arial Nova", Arial, sans-serif;
+
+  --container-padding: 6vw;
+  --transition-base: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}

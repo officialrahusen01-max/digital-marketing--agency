@@ -1,0 +1,26 @@
+@import "./styles/variables.css";
+@import "./styles/globals.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		background: #0b0b0d;
+		color: #f5f1e8;
+	}
+
+	::selection {
+		background: #d7ff3f;
+		color: #0b0b0d;
+	}
+
+	@media (pointer: fine) {
+		body,
+		a,
+		button {
+			cursor: none;
+		}
+	}
+}

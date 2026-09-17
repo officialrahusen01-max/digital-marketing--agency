@@ -37,34 +37,58 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="grid gap-10 py-10 text-sm sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_0.8fr] lg:py-14">
+        <div className="grid gap-10 border-b border-cream/15 py-10 text-sm sm:grid-cols-2 lg:grid-cols-[1.2fr_repeat(4,1fr)] lg:py-14">
           <div>
             <Link to="/" data-cursor="Home" className="group inline-flex items-center gap-3 text-2xl font-semibold tracking-[-0.07em]">
-              <span className="grid h-10 w-10 place-items-center rounded-[12px] bg-coral text-2xl font-black leading-none text-ink transition-transform duration-500 group-hover:rotate-12">N</span>
-              Northstar<span className="text-coral">.</span>
+              <span className="grid h-10 w-10 place-items-center rounded-[12px] bg-coral text-2xl font-black leading-none text-ink transition-transform duration-500 group-hover:rotate-12">A</span>
+              Averixa<span className="text-coral">.</span>
             </Link>
-            <p className="mt-5 max-w-xs leading-6 text-mist">Strategy, creative and performance for brands ready to move forward.</p>
+            <p className="mt-5 max-w-xs leading-6 text-mist">Innovation, digital expertise and business growth for brands ready to move forward.</p>
           </div>
           <div>
-            <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-mist">Explore</p>
+            <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-mist">Services</p>
             <div className="flex flex-col items-start gap-3 text-cream/80">
-              <Link to="/about" data-cursor="About" className="transition-colors hover:text-coral">About us</Link>
-              <Link to="/services" data-cursor="Services" className="transition-colors hover:text-coral">Services</Link>
-              <Link to="/services" data-cursor="Work" className="transition-colors hover:text-coral">Selected work</Link>
+              <Link to="/services/seo" data-cursor="SEO" className="transition-colors hover:text-coral">SEO</Link>
+              <Link to="/services/google-ads" data-cursor="Google Ads" className="transition-colors hover:text-coral">Google Ads</Link>
+              <Link to="/services/social-media-marketing" data-cursor="Social" className="transition-colors hover:text-coral">Social Media</Link>
+              <Link to="/services/web-development" data-cursor="Web" className="transition-colors hover:text-coral">Web Development</Link>
+              <Link to="/services/mobile-app-development" data-cursor="Mobile" className="transition-colors hover:text-coral">Mobile App Development</Link>
             </div>
           </div>
           <div>
-            <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-mist">Follow along</p>
+            <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-mist">Company</p>
             <div className="flex flex-col items-start gap-3 text-cream/80">
-              <a href="mailto:officialrahusen01@gmail.com" className="transition-colors hover:text-coral">Email us</a>
-              <a href="tel:+919772609110" className="transition-colors hover:text-coral">Call the studio</a>
+              <Link to="/about" className="transition-colors hover:text-coral">About Us</Link>
+              <Link to="/work" className="transition-colors hover:text-coral">Our Work</Link>
+              <Link to="/careers" className="transition-colors hover:text-coral">Careers</Link>
+              <Link to="/contact" className="transition-colors hover:text-coral">Contact</Link>
+            </div>
+          </div>
+          <div>
+            <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-mist">Resources</p>
+            <div className="flex flex-col items-start gap-3 text-cream/80">
+              <Link to="/blog" className="transition-colors hover:text-coral">Blog</Link>
+              <Link to="/case-studies" className="transition-colors hover:text-coral">Case Studies</Link>
+              <Link to="/insights" className="transition-colors hover:text-coral">Insights</Link>
+              <Link to="/faqs" className="transition-colors hover:text-coral">FAQs</Link>
+            </div>
+          </div>
+          <div>
+            <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-mist">Connect</p>
+            <div className="flex flex-col items-start gap-3 text-cream/80">
+              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-coral">Instagram</a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-coral">LinkedIn</a>
+              <a href="https://wa.me/919772609110" target="_blank" rel="noreferrer" className="transition-colors hover:text-coral">WhatsApp</a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-coral">YouTube</a>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col justify-between gap-4 border-t border-cream/15 pt-6 text-[10px] uppercase tracking-[0.15em] text-mist sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} Northstar Studio. Built for the brave.</p>
-          <p>Made with intent / Available worldwide</p>
+        <div className="grid gap-3 border-t border-cream/15 pt-6 text-[10px] uppercase tracking-[0.15em] text-mist sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          <p>Jaipur, India</p>
+          <a href="mailto:officialrahusen01@gmail.com" className="transition-colors hover:text-coral">officialrahusen01@gmail.com</a>
+          <a href="tel:+919772609110" className="transition-colors hover:text-coral">+91 97726 09110</a>
+          <p>© {new Date().getFullYear()} Averixa Digital Solutions</p>
         </div>
       </div>
     </footer>

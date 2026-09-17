@@ -49,7 +49,7 @@ export default function AboutPreview() {
             We make brands feel <em className="font-display font-normal text-coral">alive</em> in the real world.
           </h2>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-ink/70">
-            Northstar is an independent digital agency for ambitious teams. We find the human truth in your business and turn it into work people remember, share and choose.
+            Averixa Digital Solutions helps ambitious teams turn technology, marketing and innovation into business growth people can see and measure.
           </p>
 
           <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center">
@@ -58,7 +58,7 @@ export default function AboutPreview() {
               data-cursor="View"
               className="group inline-flex items-center gap-4 rounded-full bg-ink px-6 py-3 text-[10px] uppercase tracking-[0.18em] text-cream transition duration-500 hover:-translate-y-1 hover:bg-coral hover:text-ink"
             >
-              More about Northstar
+              More about Averixa
               <span className="text-lg transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
             </Link>
             <span className="text-[10px] uppercase tracking-[0.2em] text-ink/55">Strategy • Creative • Performance</span>

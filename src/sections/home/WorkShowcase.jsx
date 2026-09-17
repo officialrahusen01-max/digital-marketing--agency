@@ -2,6 +2,12 @@ import { projects } from "../../data/projects.js";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
+const projectImages = [
+  "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1600&q=85",
+  "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1600&q=85",
+  "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=85",
+];
+
 export default function WorkShowcase() {
   return (
     <section className="bg-[#151518] px-6 py-24 text-cream sm:px-10 lg:px-[6vw] lg:py-36" aria-labelledby="work-title">
@@ -26,9 +32,11 @@ export default function WorkShowcase() {
               transition={{ delay: index * 0.1, duration: 0.7 }}
               className={index === 0 ? "md:col-span-2" : ""}
             >
-              <Link to="/services" data-cursor="View" className="group block">
+              <Link to="/work" data-cursor="View" className="group block">
                 <div className={`relative aspect-[16/9] overflow-hidden bg-gradient-to-br ${project.color} p-6 text-ink transition duration-700 group-hover:-translate-y-2 group-hover:shadow-[0_35px_80px_rgba(0,0,0,0.22)] sm:p-10`}>
+                  <img src={projectImages[index]} alt={`${project.title} project`} className="absolute inset-0 h-full w-full object-cover mix-blend-overlay opacity-45 transition duration-1000 group-hover:scale-105 group-hover:opacity-65" />
                   <div className="absolute inset-0 bg-[linear-gradient(115deg,transparent_20%,rgba(255,255,255,.3),transparent_45%)] opacity-0 transition duration-700 group-hover:translate-x-full group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(8,9,9,0.72),transparent_65%)]" />
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.35),transparent_30%)]" />
                   <div className="absolute right-8 top-8 h-24 w-24 rounded-full border border-ink/25 transition-transform duration-700 group-hover:scale-150" />
                   <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10">

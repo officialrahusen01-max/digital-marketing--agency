@@ -64,6 +64,16 @@ export default function ServiceDetail({ service }) {
             </div>
           </motion.div>
         </div>
+
+        <div className="mt-20 flex flex-col justify-between gap-8 border-t border-ink/15 pt-8 sm:flex-row sm:items-end">
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.2em] text-ink/55">Ready for the next move?</p>
+            <h3 className="mt-4 max-w-2xl text-[clamp(2.5rem,5vw,5.5rem)] leading-[0.88] tracking-[-0.07em]">Let&apos;s make this <em className="font-display font-normal text-coral">useful.</em></h3>
+          </div>
+          <a href="/contact" className="inline-flex shrink-0 items-center gap-5 rounded-full bg-ink px-6 py-4 text-xs uppercase tracking-[0.14em] text-cream transition duration-500 hover:-translate-y-1 hover:bg-coral hover:text-ink">
+            Talk to Averixa <span className="text-lg">↗</span>
+          </a>
+        </div>
       </div>
     </section>
   );

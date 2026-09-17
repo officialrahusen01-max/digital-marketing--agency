@@ -26,6 +26,7 @@ export default function Services() {
         <div className="mx-auto max-w-[1600px]">
           <p className="mb-8 text-[10px] uppercase tracking-[0.2em]">One team / One clear direction</p>
           <h2 id="services-cta-title" className="max-w-5xl text-[clamp(3.5rem,8vw,9rem)] leading-[0.84] tracking-[-0.08em]">Your next chapter needs a <em className="font-display font-normal">point of view.</em></h2>
+          <a href="/contact" className="mt-10 inline-flex items-center gap-5 rounded-full bg-ink px-6 py-4 text-xs uppercase tracking-[0.14em] text-cream transition duration-500 hover:-translate-y-1 hover:bg-cream hover:text-ink">Start a conversation <span className="text-lg">↗</span></a>
         </div>
       </section>
     </main>

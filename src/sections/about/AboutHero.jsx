@@ -10,7 +10,7 @@ export default function AboutHero() {
       <div className="mx-auto max-w-[1600px]">
         <motion.p initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="mb-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.24em] text-mist">
           <span className="h-2 w-2 rounded-full bg-coral shadow-[0_0_16px_rgb(0_221_204)]" />
-          02 / About Northstar
+          02 / About Averixa
         </motion.p>
 
         <h1 id="about-hero-title" className="max-w-[1100px] text-[clamp(4rem,10vw,10rem)] font-medium leading-[0.82] tracking-[-0.085em]">
@@ -23,10 +23,10 @@ export default function AboutHero() {
 
         <div className="mt-14 grid gap-10 border-t border-cream/15 pt-6 md:grid-cols-[0.55fr_1fr] md:gap-16">
           <motion.p initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.55, duration: 0.8 }} className="text-[10px] uppercase tracking-[0.18em] text-mist">
-            Independent digital agency<br />Delhi / Worldwide
+            Digital solutions company<br />Delhi / Worldwide
           </motion.p>
           <motion.p initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.62, duration: 0.8 }} className="max-w-2xl text-xl leading-8 text-cream/80 sm:text-2xl sm:leading-9">
-            Northstar is a small, senior team building clear identities, sharp experiences and growth systems for companies ready to move with intent.
+            Averixa Digital Solutions helps ambitious businesses grow through innovation, digital expertise and practical business thinking.
           </motion.p>
         </div>
 

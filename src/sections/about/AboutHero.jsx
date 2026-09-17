@@ -9,7 +9,7 @@ export default function AboutHero() {
       <div className="pointer-events-none absolute right-[8%] top-[18%] -z-10 h-48 w-48 rounded-full border border-coral/10 animate-orbit" />
       <div className="mx-auto max-w-[1600px]">
         <motion.p initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="mb-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.24em] text-mist">
-          <span className="h-2 w-2 rounded-full bg-coral shadow-[0_0_16px_#d7ff3f]" />
+          <span className="h-2 w-2 rounded-full bg-coral shadow-[0_0_16px_rgb(0_221_204)]" />
           02 / About Northstar
         </motion.p>
 

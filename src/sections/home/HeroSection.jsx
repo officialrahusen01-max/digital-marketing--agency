@@ -26,13 +26,13 @@ export default function HeroSection() {
 
   return (
     <section ref={heroRef} onPointerMove={handlePointerMove} onPointerLeave={resetPointer} className="relative isolate overflow-hidden bg-ink px-6 pb-8 pt-24 text-cream sm:px-10 lg:px-[6vw] lg:pb-10 lg:pt-32" aria-labelledby="hero-title">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_85%_8%,rgba(215,255,63,0.1),transparent_26%),linear-gradient(120deg,transparent_30%,rgba(255,255,255,0.025),transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_85%_8%,rgb(0_221_204_/_10%),transparent_26%),linear-gradient(120deg,transparent_30%,rgba(255,255,255,0.025),transparent_70%)]" />
       <div className="pointer-events-none absolute -right-40 top-0 -z-10 h-[min(55vw,720px)] w-[min(55vw,720px)] rounded-full border border-coral/20" />
 
       <div className="relative mx-auto max-w-[1600px]">
         <motion.div initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08, delayChildren: 0.12 } } }}>
           <motion.p variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="mb-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.24em] text-mist">
-            <span className="h-2.5 w-2.5 animate-soft-pulse rounded-full bg-coral shadow-[0_0_18px_#d7ff3f]" />
+            <span className="h-2.5 w-2.5 animate-soft-pulse rounded-full bg-coral shadow-[0_0_18px_rgb(0_221_204)]" />
             Independent digital agency / Delhi — Worldwide
           </motion.p>
 

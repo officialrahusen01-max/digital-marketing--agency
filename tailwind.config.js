@@ -6,7 +6,7 @@ export default {
       colors: {
         ink: "#0a0a0f",
         cream: "#f3f0ff",
-        coral: "#c8ff42",
+        coral: "rgb(0 221 204)",
         mist: "#a29db5",
       },
       fontFamily: {

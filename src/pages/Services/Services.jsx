@@ -7,7 +7,7 @@ export default function Services() {
       <section className="relative isolate overflow-hidden px-6 pb-24 pt-28 sm:px-10 lg:px-[6vw] lg:pb-36 lg:pt-36" aria-labelledby="services-title">
         <div className="pointer-events-none absolute -right-40 top-0 -z-10 h-[min(60vw,760px)] w-[min(60vw,760px)] rounded-full border border-coral/15" />
         <div className="mx-auto max-w-[1600px]">
-          <p className="mb-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.24em] text-mist"><span className="h-2 w-2 rounded-full bg-coral shadow-[0_0_16px_#d7ff3f]" />03 / What we do</p>
+          <p className="mb-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.24em] text-mist"><span className="h-2 w-2 rounded-full bg-coral shadow-[0_0_16px_rgb(0_221_204)]" />03 / What we do</p>
           <h1 id="services-title" className="max-w-[1100px] text-[clamp(4rem,10vw,10rem)] font-medium leading-[0.82] tracking-[-0.085em]">Built for <em className="font-display font-normal text-coral">forward</em> motion.</h1>
           <div className="mt-12 grid gap-8 border-t border-cream/15 pt-6 md:grid-cols-[0.55fr_1fr] md:gap-16">
             <p className="text-[10px] uppercase tracking-[0.18em] text-mist">Strategy / Creative / Growth</p>

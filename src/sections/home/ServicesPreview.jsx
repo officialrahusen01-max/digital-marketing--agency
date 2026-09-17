@@ -2,7 +2,7 @@ import { services } from "../../data/services.js";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const accentMap = ["#d7ff3f", "#f0d8b5", "#84d7ff"];
+const accentMap = ["rgb(0 221 204)", "#f0d8b5", "#84d7ff"];
 
 export default function ServicesPreview() {
   return (

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function ServiceCard({ service, index }) {
   return (
     <motion.article initial={{ opacity: 0, y: 35 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ delay: index * 0.1, duration: 0.75, ease: [0.16, 1, 0.3, 1] }} className="group">
-      <Link to={`/services/${service.id}`} data-cursor="View service" className="relative block min-h-[390px] overflow-hidden rounded-[1.75rem] border border-cream/10 bg-[#111413] p-6 transition duration-700 hover:-translate-y-2 hover:border-coral/70 hover:shadow-[0_30px_80px_rgba(215,255,63,0.12)] sm:p-8">
+      <Link to={`/services/${service.id}`} data-cursor="View service" className="relative block min-h-[390px] overflow-hidden rounded-[1.75rem] border border-cream/10 bg-[#111413] p-6 transition duration-700 hover:-translate-y-2 hover:border-coral/70 hover:shadow-[0_30px_80px_rgb(0_221_204_/_12%)] sm:p-8">
         <span className="absolute -right-16 -top-16 h-48 w-48 rounded-full border border-coral/20 transition duration-1000 group-hover:scale-150 group-hover:border-coral/50" />
         <div className="relative flex h-full flex-col justify-between">
           <div>

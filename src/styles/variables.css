@@ -2,7 +2,7 @@
   --color-bg: #0a0a0f;
   --color-text: #f3f0ff;
   --color-muted: #a29db5;
-  --color-accent: #c8ff42;
+  --color-accent: rgb(0 221 204);
   --color-accent-secondary: #a98cff;
 
   --font-primary: "Helvetica Neue", "Arial Nova", Arial, sans-serif;

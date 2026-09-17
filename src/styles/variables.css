@@ -1,8 +1,9 @@
 :root {
-  --color-bg: #080909;
-  --color-text: #f7f7f2;
-  --color-muted: #969b92;
-  --color-accent: #d7ff3f;
+  --color-bg: #0a0a0f;
+  --color-text: #f3f0ff;
+  --color-muted: #a29db5;
+  --color-accent: #c8ff42;
+  --color-accent-secondary: #a98cff;
 
   --font-primary: "Helvetica Neue", "Arial Nova", Arial, sans-serif;
 

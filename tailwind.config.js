@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#080909",
-        cream: "#f7f7f2",
-        coral: "#d7ff3f",
-        mist: "#969b92",
+        ink: "#0a0a0f",
+        cream: "#f3f0ff",
+        coral: "#c8ff42",
+        mist: "#a29db5",
       },
       fontFamily: {
         sans: ["Helvetica Neue", "Arial", "sans-serif"],

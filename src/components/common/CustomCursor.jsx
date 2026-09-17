@@ -5,23 +5,35 @@ import { useMousePosition } from "../../hooks/useMousePosition.js";
 export default function CustomCursor() {
   const { x, y } = useMousePosition();
   const [label, setLabel] = useState("");
-  const cursorX = useSpring(useMotionValue(x), { stiffness: 500, damping: 35, mass: 0.2 });
-  const cursorY = useSpring(useMotionValue(y), { stiffness: 500, damping: 35, mass: 0.2 });
+  const cursorX = useSpring(useMotionValue(0), { stiffness: 700, damping: 42, mass: 0.16 });
+  const cursorY = useSpring(useMotionValue(0), { stiffness: 700, damping: 42, mass: 0.16 });
+  const ringX = useSpring(useMotionValue(0), { stiffness: 180, damping: 24, mass: 0.4 });
+  const ringY = useSpring(useMotionValue(0), { stiffness: 180, damping: 24, mass: 0.4 });
 
   useEffect(() => {
     cursorX.set(x);
     cursorY.set(y);
-  }, [cursorX, cursorY, x, y]);
+    ringX.set(x);
+    ringY.set(y);
+  }, [cursorX, cursorY, ringX, ringY, x, y]);
 
   useEffect(() => {
-    const handleOver = (event) => setLabel(event.target.closest("[data-cursor]")?.dataset.cursor || "");
-    document.addEventListener("mouseover", handleOver);
+    const handleOver = (event) => {
+      const target = event.target instanceof Element ? event.target.closest("[data-cursor]") : null;
+      setLabel(target?.dataset.cursor || "");
+    };
+
+    document.addEventListener("mouseover", handleOver, { passive: true });
     return () => document.removeEventListener("mouseover", handleOver);
   }, []);
 
   return (
-    <motion.div className="pointer-events-none fixed left-0 top-0 z-[9999] hidden h-3 w-3 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-coral text-[9px] uppercase text-ink mix-blend-difference md:flex" style={{ x: cursorX, y: cursorY }} animate={{ scale: label ? 5 : 1 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
-      {label && <span className="scale-[0.2] whitespace-nowrap font-bold tracking-normal">{label}</span>}
-    </motion.div>
+    <div className="custom-cursor" aria-hidden="true">
+      <motion.span className="custom-cursor__ring" style={{ x: ringX, y: ringY }} animate={{ scale: label ? 1.3 : 1, opacity: label ? 0.9 : 0.55 }} />
+      <motion.span className="custom-cursor__dot" style={{ x: cursorX, y: cursorY }} animate={{ scale: label ? 1.35 : 1 }} />
+      <motion.span className="custom-cursor__label" style={{ x: cursorX, y: cursorY }} animate={{ opacity: label ? 1 : 0 }}>
+        <span>{label}</span>
+      </motion.span>
+    </div>
   );
 }

@@ -3,6 +3,7 @@ import BrandTicker from "../../sections/home/BrandTicker.jsx";
 import AboutPreview from "../../sections/home/AboutPreview.jsx";
 import ServicesPreview from "../../sections/home/ServicesPreview.jsx";
 import WorkShowcase from "../../sections/home/WorkShowcase.jsx";
+import ImageScrollGallery from "../../sections/home/ImageScrollGallery.jsx";
 import ProcessSection from "../../sections/home/ProcessSection.jsx";
 import TestimonialSection from "../../sections/home/TestimonialSection.jsx";
 import CtaSection from "../../sections/home/CtaSection.jsx";
@@ -15,6 +16,7 @@ export default function Home() {
       <AboutPreview />
       <ServicesPreview />
       <WorkShowcase />
+      <ImageScrollGallery />
       <ProcessSection />
       <TestimonialSection />
       <CtaSection />

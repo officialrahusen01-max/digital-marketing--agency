@@ -24,7 +24,7 @@ export default function Work() {
           <div className="mt-12 grid gap-10 border-t border-cream/15 pt-6 md:grid-cols-[0.55fr_1fr] md:gap-16">
             <p className="text-[10px] uppercase tracking-[0.18em] text-mist">Identity / Experience / Growth</p>
             <p className="max-w-2xl text-xl leading-8 text-cream/75 sm:text-2xl sm:leading-9">
-              Vertexo is Averixa&apos;s growth mindset: helping brands reach their digital peak through sharper technology, marketing and innovation.
+              Vertexo helps brands reach their digital peak through sharper technology, marketing and innovation.
             </p>
           </div>
         </div>

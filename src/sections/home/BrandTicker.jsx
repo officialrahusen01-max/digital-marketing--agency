@@ -4,12 +4,12 @@ const items = [
   "Innovation",
   "Digital expertise",
   "Business growth",
-  "Reach your digital peak",
+  "Reach Your Digital Peak",
 ];
 
 export default function BrandTicker() {
   return (
-    <div className="relative overflow-hidden border-y border-ink/20 bg-coral py-5 text-ink shadow-[0_20px_60px_rgb(0_221_204_/_14%)]" aria-label="Averixa principles">
+    <div className="relative overflow-hidden border-y border-ink/20 bg-coral py-5 text-ink shadow-[0_20px_60px_rgb(0_221_204_/_14%)]" aria-label="Vertexo principles">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.25),transparent_55%)]" />
       <motion.div
         animate={{ x: ["0%", "-50%"] }}

@@ -33,7 +33,7 @@ export default function HeroSection() {
         <motion.div initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08, delayChildren: 0.12 } } }}>
           <motion.p variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="mb-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.24em] text-mist">
             <span className="h-2.5 w-2.5 animate-soft-pulse rounded-full bg-coral shadow-[0_0_18px_rgb(0_221_204)]" />
-            Averixa Digital Solutions / Delhi — Worldwide
+            Vertexo Digital Solutions / Delhi — Worldwide
           </motion.p>
 
           <h1 id="hero-title" className="max-w-[1150px] text-[clamp(3.4rem,8.3vw,9.3rem)] font-medium leading-[0.86] tracking-[-0.075em]">
@@ -87,7 +87,7 @@ export default function HeroSection() {
 
       <div className="relative mx-auto mt-8 flex max-w-[1600px] justify-between border-t border-cream/15 pt-4 text-[10px] uppercase tracking-[0.16em] text-mist">
         <span>01 — 06</span>
-        <span className="hidden sm:inline">Averixa / Digital solutions</span>
+        <span className="hidden sm:inline">Vertexo / Digital solutions</span>
         <span>Est. 2024</span>
       </div>
     </section>

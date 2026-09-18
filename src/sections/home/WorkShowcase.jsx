@@ -1,12 +1,30 @@
 import { projects } from "../../data/projects.js";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 const projectImages = [
   "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1600&q=85",
   "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1600&q=85",
   "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=85",
 ];
+
+function ScrollImage({ src, alt, index }) {
+  const imageRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: imageRef, offset: ["start end", "end start"] });
+  const imageScale = useTransform(scrollYProgress, [0, 0.5, 1], [1.18, 1.06, 1.18]);
+  const imageY = useTransform(scrollYProgress, [0, 1], index % 2 === 0 ? [28, -28] : [-28, 28]);
+
+  return (
+    <motion.img
+      ref={imageRef}
+      style={{ scale: imageScale, y: imageY }}
+      src={src}
+      alt={alt}
+      className="absolute inset-0 h-full w-full object-cover mix-blend-overlay opacity-45 transition-opacity duration-1000 group-hover:opacity-65"
+    />
+  );
+}
 
 export default function WorkShowcase() {
   return (
@@ -34,7 +52,7 @@ export default function WorkShowcase() {
             >
               <Link to="/work" data-cursor="View" className="group block">
                 <div className={`relative aspect-[16/9] overflow-hidden bg-gradient-to-br ${project.color} p-6 text-ink transition duration-700 group-hover:-translate-y-2 group-hover:shadow-[0_35px_80px_rgba(0,0,0,0.22)] sm:p-10`}>
-                  <img src={projectImages[index]} alt={`${project.title} project`} className="absolute inset-0 h-full w-full object-cover mix-blend-overlay opacity-45 transition duration-1000 group-hover:scale-105 group-hover:opacity-65" />
+                  <ScrollImage src={projectImages[index]} alt={`${project.title} project`} index={index} />
                   <div className="absolute inset-0 bg-[linear-gradient(115deg,transparent_20%,rgba(255,255,255,.3),transparent_45%)] opacity-0 transition duration-700 group-hover:translate-x-full group-hover:opacity-100" />
                   <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(8,9,9,0.72),transparent_65%)]" />
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.35),transparent_30%)]" />

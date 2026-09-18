@@ -7,7 +7,7 @@ const pageContent = {
     intro: "We are always looking for thoughtful strategists, makers and growth-minded people who care about the details.",
     items: ["Creative roles", "Growth and performance", "Technology and product", "Internships and collaborations"],
     cta: "Send your introduction",
-    href: "mailto:officialrahusen01@gmail.com?subject=Careers%20at%20Averixa",
+    href: "mailto:officialrahusen01@gmail.com?subject=Careers%20at%20Vertexo",
   },
   contact: {
     eyebrow: "Company / Contact",
@@ -23,7 +23,7 @@ const pageContent = {
     intro: "Notes on digital growth, creative systems, technology and the work behind stronger brands.",
     items: ["How to build a digital growth system", "What makes a brand memorable", "The practical SEO starting point", "Creative that earns attention"],
     cta: "Get in touch for the latest",
-    href: "mailto:officialrahusen01@gmail.com?subject=Averixa%20Blog",
+    href: "mailto:officialrahusen01@gmail.com?subject=Vertexo%20Blog",
   },
   "case-studies": {
     eyebrow: "Resources / Case Studies",
@@ -38,8 +38,8 @@ const pageContent = {
     title: "Clearer signals. Better decisions.",
     intro: "A practical point of view on where marketing, technology and business growth meet.",
     items: ["Innovation with a commercial reason", "Digital expertise without the jargon", "Growth that compounds over time", "The human side of technology"],
-    cta: "Talk to Averixa",
-    href: "mailto:officialrahusen01@gmail.com?subject=Averixa%20Insights",
+    cta: "Talk to Vertexo",
+    href: "mailto:officialrahusen01@gmail.com?subject=Vertexo%20Insights",
   },
   faqs: {
     eyebrow: "Resources / FAQs",
@@ -47,7 +47,7 @@ const pageContent = {
     intro: "A few useful answers before we begin. Still curious? Our team is one message away.",
     items: ["What does a project usually start with?", "Can you work with an existing team?", "Do you support businesses outside India?", "How do we measure success?"],
     cta: "Ask us anything",
-    href: "mailto:officialrahusen01@gmail.com?subject=Question%20for%20Averixa",
+    href: "mailto:officialrahusen01@gmail.com?subject=Question%20for%20Vertexo",
   },
 };
 

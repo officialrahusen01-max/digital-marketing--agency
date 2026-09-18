@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo/logo2.png";
 
 export default function Footer() {
   return (
@@ -40,8 +41,7 @@ export default function Footer() {
         <div className="grid gap-10 border-b border-cream/15 py-10 text-sm sm:grid-cols-2 lg:grid-cols-[1.2fr_repeat(4,1fr)] lg:py-14">
           <div>
             <Link to="/" data-cursor="Home" className="group inline-flex items-center gap-3 text-2xl font-semibold tracking-[-0.07em]">
-              <span className="grid h-10 w-10 place-items-center rounded-[12px] bg-coral text-2xl font-black leading-none text-ink transition-transform duration-500 group-hover:rotate-12">A</span>
-              Averixa<span className="text-coral">.</span>
+              <img src={logo} alt="Vertexo Digital Solutions" className="h-16 w-auto max-w-full transition-transform duration-500 group-hover:scale-105" />
             </Link>
             <p className="mt-5 max-w-xs leading-6 text-mist">Innovation, digital expertise and business growth for brands ready to move forward.</p>
           </div>
@@ -88,7 +88,7 @@ export default function Footer() {
           <p>Jaipur, India</p>
           <a href="mailto:officialrahusen01@gmail.com" className="transition-colors hover:text-coral">officialrahusen01@gmail.com</a>
           <a href="tel:+919772609110" className="transition-colors hover:text-coral">+91 97726 09110</a>
-          <p>© {new Date().getFullYear()} Averixa Digital Solutions</p>
+          <p>© {new Date().getFullYear()} Vertexo Digital Solutions</p>
         </div>
       </div>
     </footer>

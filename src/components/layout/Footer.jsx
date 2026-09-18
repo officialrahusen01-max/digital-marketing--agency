@@ -77,7 +77,7 @@ export default function Footer() {
             <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-mist">Connect</p>
             <div className="flex flex-col items-start gap-3 text-cream/80">
               <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-coral">Instagram</a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-coral">LinkedIn</a>
+              <a href="https://www.linkedin.com/company/vertexo-digital-solution/about/?viewAsMember=true" target="_blank" rel="noreferrer" className="transition-colors hover:text-coral">LinkedIn</a>
               <a href="https://wa.me/919772609110" target="_blank" rel="noreferrer" className="transition-colors hover:text-coral">WhatsApp</a>
               <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-coral">YouTube</a>
             </div>

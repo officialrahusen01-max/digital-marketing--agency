@@ -51,12 +51,12 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.div variants={{ hidden: { opacity: 0, y: 22 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="mt-10 flex flex-wrap items-center gap-6">
-            <a href="/work" className="group inline-flex min-h-12 items-center gap-5 rounded-full bg-coral px-6 text-xs uppercase tracking-[0.12em] text-ink transition duration-500 hover:-translate-y-1 hover:bg-cream">
-              Explore our work
+            <a href="/enquirisubmit" className="group inline-flex min-h-12 items-center gap-5 rounded-full bg-coral px-6 text-xs uppercase tracking-[0.12em] text-ink transition duration-500 hover:-translate-y-1 hover:bg-cream">
+              Enquire now
               <span aria-hidden="true" className="text-lg transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
             </a>
-            <a href="/about" className="group inline-flex min-h-12 items-center gap-4 text-xs uppercase tracking-[0.12em] text-mist transition duration-500 hover:translate-x-1 hover:text-cream">
-              Meet the agency
+            <a href="/work" className="group inline-flex min-h-12 items-center gap-5 text-xs uppercase tracking-[0.12em] text-mist transition duration-500 hover:translate-x-1 hover:text-cream">
+              Explore our work
               <span aria-hidden="true" className="text-lg transition-transform duration-500 group-hover:translate-y-1">↓</span>
             </a>
           </motion.div>

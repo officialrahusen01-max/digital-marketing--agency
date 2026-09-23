@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import EnquiryForm from "../../components/EnquiryForm.jsx";
 
 const pageContent = {
   careers: {
@@ -90,6 +91,8 @@ export default function InfoPage({ type }) {
           )}
         </div>
       </section>
+
+      {type === "contact" && <EnquiryForm />}
     </main>
   );
 }

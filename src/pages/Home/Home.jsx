@@ -6,6 +6,7 @@ import WorkShowcase from "../../sections/home/WorkShowcase.jsx";
 import ImageScrollGallery from "../../sections/home/ImageScrollGallery.jsx";
 import ProcessSection from "../../sections/home/ProcessSection.jsx";
 import TestimonialSection from "../../sections/home/TestimonialSection.jsx";
+import BlogSection from "../../sections/home/BlogSection.jsx";
 import CtaSection from "../../sections/home/CtaSection.jsx";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <ImageScrollGallery />
       <ProcessSection />
       <TestimonialSection />
+      <BlogSection />
       <CtaSection />
     </>
   );

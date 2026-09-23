@@ -8,6 +8,11 @@ import SocialMediaMarketing from "../pages/Services/SocialMediaMarketing.jsx";
 import Work from "../pages/Work/Work.jsx";
 import ServicePage from "../pages/Services/ServicePage.jsx";
 import InfoPage from "../pages/Info/InfoPage.jsx";
+import EnquirySubmit from "../pages/Enquiry/EnquirySubmit.jsx";
+import BlogListPage from "../pages/Blog/BlogListPage.jsx";
+import BlogDetailPage from "../pages/Blog/BlogDetailPage.jsx";
+import AdminLogin from "../pages/Admin/AdminLogin.jsx";
+import AdminDashboard from "../pages/Admin/AdminDashboard.jsx";
 
 export default function AppRoutes() {
   return (
@@ -24,7 +29,11 @@ export default function AppRoutes() {
       <Route path="/services/mobile-app-development" element={<ServicePage />} />
       <Route path="/careers" element={<InfoPage type="careers" />} />
       <Route path="/contact" element={<InfoPage type="contact" />} />
-      <Route path="/blog" element={<InfoPage type="blog" />} />
+      <Route path="/enquirisubmit" element={<EnquirySubmit />} />
+      <Route path="/blog" element={<BlogListPage />} />
+      <Route path="/blog/:slug" element={<BlogDetailPage />} />
+      <Route path="/admin" element={<AdminLogin />} />
+      <Route path="/admin/dashboard" element={<AdminDashboard />} />
       <Route path="/case-studies" element={<InfoPage type="case-studies" />} />
       <Route path="/insights" element={<InfoPage type="insights" />} />
       <Route path="/faqs" element={<InfoPage type="faqs" />} />

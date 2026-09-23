@@ -17,6 +17,7 @@ export default function Navbar() {
           <Link to="/about" data-cursor="About" className="transition-colors hover:text-coral">About</Link>
           <Link to="/services" data-cursor="Services" className="transition-colors hover:text-coral">Services</Link>
           <Link to="/work" data-cursor="Work" className="transition-colors hover:text-coral">Work</Link>
+          <Link to="/blog" data-cursor="Blog" className="transition-colors hover:text-coral">Blog</Link>
           <Link to="/contact" data-cursor="Talk" className="rounded-full border border-coral px-5 py-3 text-[10px] uppercase tracking-[0.14em] text-coral transition-colors hover:bg-coral hover:text-ink">Start a project <span aria-hidden="true">↗</span></Link>
         </nav>
         <button
@@ -36,6 +37,7 @@ export default function Navbar() {
             <Link to="/about" onClick={closeMenu} className="border-b border-cream/10 py-4 transition-colors hover:text-coral">About</Link>
             <Link to="/services" onClick={closeMenu} className="border-b border-cream/10 py-4 transition-colors hover:text-coral">Services</Link>
             <Link to="/work" onClick={closeMenu} className="border-b border-cream/10 py-4 transition-colors hover:text-coral">Work</Link>
+            <Link to="/blog" onClick={closeMenu} className="border-b border-cream/10 py-4 transition-colors hover:text-coral">Blog</Link>
             <Link to="/contact" onClick={closeMenu} className="mt-4 inline-flex w-fit rounded-full border border-coral px-5 py-3 text-[10px] uppercase tracking-[0.14em] text-coral transition-colors hover:bg-coral hover:text-ink">Start a project <span aria-hidden="true" className="ml-2">↗</span></Link>
           </div>
         </nav>

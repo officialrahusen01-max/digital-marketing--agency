@@ -99,12 +99,12 @@ function FeaturedImageCard({ image }) {
       ref={cardRef}
       className="relative"
     >
-      <div className="relative aspect-[16/8] min-h-[320px] overflow-hidden rounded-[1.5rem] bg-[#e8dfd3] sm:min-h-[460px]">
+      <div className="relative aspect-[16/8] min-h-[320px] w-full max-w-full overflow-hidden rounded-[1.5rem] bg-[#e8dfd3] sm:min-h-[460px]">
         <motion.img
           style={{ scale: imageScale, y: imageY }}
           src={image.src}
           alt={`${image.title} for Vertexo Digital Solutions`}
-          className="absolute inset-0 z-0 h-full w-full object-cover"
+          className="absolute inset-0 z-0 h-full w-full max-w-full object-cover"
           loading="eager"
           onError={(event) => {
             event.currentTarget.style.display = "none";
@@ -114,7 +114,7 @@ function FeaturedImageCard({ image }) {
           style={{ opacity: overlayOpacity }}
           className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-ink via-ink/10 to-transparent"
         />
-        <div className="relative z-20 flex min-h-[320px] items-end justify-between gap-6 text-cream sm:min-h-[460px] sm:bottom-0 sm:left-0 sm:right-0 sm:absolute sm:bottom-10 sm:left-10 sm:right-10 sm:min-h-0">
+        <div className="relative z-20 flex min-h-[320px] items-end justify-between gap-6 text-cream sm:absolute sm:bottom-10 sm:left-10 sm:right-10 sm:min-h-0">
           <div>
             <p className="text-[10px] uppercase tracking-[0.2em] text-coral">Dedicated scroll study</p>
             <h3 className="mt-3 text-4xl tracking-[-0.06em] sm:text-6xl">{image.title}</h3>

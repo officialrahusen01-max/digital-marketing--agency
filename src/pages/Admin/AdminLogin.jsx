@@ -30,7 +30,7 @@ export default function AdminLogin() {
         throw new Error(result.message || "Invalid login");
       }
 
-      localStorage.setItem("vertexo_admin_token", result.token);
+      localStorage.setItem("nld_admin_token", result.token);
       navigate("/admin/dashboard");
     } catch (err) {
       setError(err.message || "Login failed");
@@ -52,7 +52,7 @@ export default function AdminLogin() {
               type="email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-              placeholder="admin@vertexo.com"
+              placeholder="admin@nextlifedigital.com"
               className="mt-2 w-full rounded-full border border-cream/10 bg-transparent px-4 py-3 text-base text-cream placeholder:text-cream/35 focus:border-coral focus:outline-none"
             />
           </label>

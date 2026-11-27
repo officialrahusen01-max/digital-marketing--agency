@@ -1,7 +1,8 @@
-# Digital Marketing Agency — React Project
+# Next Life Digital — Agency Website
 
-Structure inspired by Cuberto / NexGrow style agency sites: heavy scroll animation,
-section-based composition, and reusable UI blocks.
+Marketing website for **Next Life Digital** (React + Vite + Tailwind). Brand name, phones, email, WhatsApp and social links live in `src/config/site.js`; services in `src/data/services.js`; built-in blog posts in `src/data/blogs.js` (admin-panel posts from the API are shown first).
+
+SPA routing for hosting is handled by `public/_redirects` (Netlify/Render) and `vercel.json` (Vercel).
 
 ## Frontend setup
 

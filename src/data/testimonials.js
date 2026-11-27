@@ -1,3 +1,4 @@
+// PLACEHOLDER testimonials — replace with real client reviews before launch.
 export const testimonials = [
   {
     id: 1,

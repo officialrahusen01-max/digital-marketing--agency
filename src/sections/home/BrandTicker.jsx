@@ -1,32 +1,23 @@
-import { motion } from "framer-motion";
-
-const items = [
-  "Innovation",
-  "Digital expertise",
-  "Business growth",
-  "Reach Your Digital Peak",
-];
+// Strip of platforms we work on (names only — not partnership claims).
+const platforms = ["Google Search", "Google Ads", "Meta Ads", "Instagram", "YouTube", "LinkedIn", "WordPress", "Shopify", "React", "Android & iOS"];
 
 export default function BrandTicker() {
   return (
-    <div className="relative overflow-hidden border-y border-ink/20 bg-coral py-5 text-ink shadow-[0_20px_60px_rgb(0_221_204_/_14%)]" aria-label="Vertexo principles">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.25),transparent_55%)]" />
-      <motion.div
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 24, ease: "linear", repeat: Infinity }}
-        className="relative flex w-max items-center whitespace-nowrap"
-      >
-        {[...Array(2)].map((_, copy) => (
-          <div key={copy} className="flex items-center">
-            {items.map((item) => (
-              <span key={`${copy}-${item}`} className="mx-5 flex items-center text-[11px] font-semibold uppercase tracking-[0.25em] sm:text-sm">
-                {item}
-                <span className="mx-4 inline-flex h-2 w-2 rounded-full bg-ink/80" />
+    <section className="border-y border-white/10 bg-night py-8" aria-label="Platforms we work on">
+      <div className="container-x flex flex-col items-center gap-6 lg:flex-row lg:gap-10">
+        <p className="shrink-0 text-center text-sm font-semibold text-slate-500 lg:text-left">
+          Platforms we <br className="hidden lg:block" />work on every day
+        </p>
+        <div className="mask-fade-x relative w-full overflow-hidden">
+          <div className="flex w-max animate-marquee items-center gap-12 hover:[animation-play-state:paused]">
+            {[...platforms, ...platforms].map((name, index) => (
+              <span key={`${name}-${index}`} className="whitespace-nowrap text-xl font-bold tracking-tight text-slate-600 transition hover:text-brand-300" aria-hidden={index >= platforms.length}>
+                {name}
               </span>
             ))}
           </div>
-        ))}
-      </motion.div>
-    </div>
+        </div>
+      </div>
+    </section>
   );
 }

@@ -10,7 +10,7 @@ export const services = [
     overview: "We build acquisition systems that attract more of the right traffic, convert intent into action, and keep the funnel learning after every campaign.",
     deliverables: ["Positioning & channel strategy", "Paid acquisition systems", "Lifecycle campaigns", "Performance reporting"],
     result: "More qualified demand, less wasted spend.",
-    stat: "3.2x ROAS",
+    stat: "More leads",
     process: [
       { title: "Diagnose", text: "Audit the current funnel, audience intent, competitor signals and efficiency gaps to define the opportunity." },
       { title: "Design", text: "Build a channel mix, messaging architecture and creative system that creates momentum instead of noise." },
@@ -28,7 +28,7 @@ export const services = [
     overview: "We turn search into a repeatable asset by improving technical performance, content relevance and authority signals that support long-term discovery.",
     deliverables: ["Technical SEO audits", "Search-led content systems", "On-page optimisation", "Authority & reporting"],
     result: "Compounding visibility built on useful work.",
-    stat: "2.4x organic lift",
+    stat: "Rank higher",
     process: [
       { title: "Diagnose", text: "Map the content gaps, crawl issues and ranking opportunities that are blocking relevant discovery." },
       { title: "Design", text: "Prioritise pages, keywords and structures that align search demand with your offer and audience intent." },
@@ -46,7 +46,7 @@ export const services = [
     overview: "We turn social channels into meaningful brand touchpoints with recipes for content, storytelling and audience participation that build real momentum.",
     deliverables: ["Social strategy & calendars", "Campaign concepts", "Content production", "Community & paid social"],
     result: "A sharper voice and a more active audience.",
-    stat: "4.8x engagement lift",
+    stat: "Grow your audience",
     process: [
       { title: "Diagnose", text: "Understand the platform behaviors, audience patterns and cultural moments that can sharpen the brand voice." },
       { title: "Design", text: "Shape a content system with recurring hooks, creative formats and campaign rhythms that feel distinctive." },
@@ -63,11 +63,11 @@ export const services = [
     overview: "We turn search demand into efficient growth with sharper account structure, clearer creative and landing experiences built to convert.",
     deliverables: ["Account architecture", "Search & shopping campaigns", "Conversion tracking", "Weekly optimisation"],
     result: "More qualified clicks, less wasted budget.",
-    stat: "3.6x ROAS",
+    stat: "Better ROI",
     process: [
       { title: "Diagnose", text: "Audit search demand, account structure, tracking and the gaps between clicks and real business outcomes." },
       { title: "Design", text: "Build campaigns, audiences, creative and landing paths around the moments most likely to convert." },
-      { title: "Deliver", text: "Optimise bids, queries and creative continuously to make every rupee work harder." },
+      { title: "Deliver", text: "Optimise bids, queries and creative continuously to make every rupee of ad spend work harder." },
     ],
   },
   {
@@ -80,7 +80,7 @@ export const services = [
     overview: "We design and build responsive digital experiences that feel distinctive, load quickly and give your business a stronger place to grow.",
     deliverables: ["UX and interface systems", "Responsive web builds", "CMS and integrations", "Performance optimisation"],
     result: "A clearer digital home for your business.",
-    stat: "2.1x more action",
+    stat: "More enquiries",
     process: [
       { title: "Diagnose", text: "Understand your audience, offer, existing experience and the moments where people lose confidence or momentum." },
       { title: "Design", text: "Shape the content, interaction and visual system so the website feels as good as the business behind it." },
@@ -97,7 +97,7 @@ export const services = [
     overview: "From a focused first release to a full product ecosystem, we help turn a useful idea into a mobile experience people return to.",
     deliverables: ["Product discovery", "UX and UI design", "iOS and Android development", "Launch and iteration support"],
     result: "A product people understand and use.",
-    stat: "4.7x retention lift",
+    stat: "Happy users",
     process: [
       { title: "Diagnose", text: "Clarify the user problem, business model, technical needs and smallest valuable version of the product." },
       { title: "Design", text: "Prototype the flows, interface and product language before investing in the full build." },

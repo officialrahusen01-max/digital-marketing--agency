@@ -68,7 +68,7 @@ function VelocityMarqueeRow({ images, baseVelocity = 2, tilt = 0 }) {
             <div className="relative aspect-[4/3] overflow-hidden">
               <img
                 src={image.src}
-                alt={`${image.title} for Vertexo Digital Solutions`}
+                alt={`${image.title} for Next Life Digital`}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover/card:scale-110"
                 loading="lazy"
                 draggable={false}
@@ -77,7 +77,7 @@ function VelocityMarqueeRow({ images, baseVelocity = 2, tilt = 0 }) {
             </div>
             <figcaption className="flex items-center justify-between px-5 py-4 text-[10px] uppercase tracking-[0.18em] text-ink/60">
               <span>{image.title}</span>
-              <span>Vertexo</span>
+              <span>Next Life Digital</span>
             </figcaption>
           </motion.figure>
         ))}
@@ -103,7 +103,7 @@ function FeaturedImageCard({ image }) {
         <motion.img
           style={{ scale: imageScale, y: imageY }}
           src={image.src}
-          alt={`${image.title} for Vertexo Digital Solutions`}
+          alt={`${image.title} for Next Life Digital`}
           className="absolute inset-0 z-0 h-full w-full max-w-full object-cover"
           loading="eager"
           onError={(event) => {
@@ -149,7 +149,7 @@ export default function ImageScrollGallery() {
             </h2>
           </div>
           <p className="max-w-xs text-sm leading-6 text-ink/60">
-            Nine visual directions for Vertexo — the strip speeds up, tilts and reverses with your scroll.
+            Ten moments from the Next Life Digital studio — the strip speeds up, tilts and reverses with your scroll.
           </p>
         </motion.div>
       </div>

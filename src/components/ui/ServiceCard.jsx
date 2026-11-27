@@ -10,7 +10,7 @@ export default function ServiceCard({ service, index }) {
           <div>
             <div className="mb-12 flex items-center justify-between text-[10px] uppercase tracking-[0.18em] text-mist">
               <span>{service.shortLabel}</span>
-              <span className="text-coral">0{index + 1}</span>
+              <span className="text-coral">{String(index + 1).padStart(2, "0")}</span>
             </div>
             <h2 className="max-w-xs text-4xl leading-[0.92] tracking-[-0.07em] transition duration-500 group-hover:text-coral sm:text-5xl">{service.title}</h2>
             <p className="mt-6 max-w-sm text-sm leading-6 text-mist">{service.description}</p>

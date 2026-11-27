@@ -19,6 +19,11 @@ export function useSmoothScroll() {
     }
     requestAnimationFrame(raf);
 
-    return () => lenis.destroy();
+    window.__lenis = lenis;
+
+    return () => {
+      lenis.destroy();
+      window.__lenis = undefined;
+    };
   }, []);
 }

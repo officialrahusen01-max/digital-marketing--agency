@@ -11,13 +11,13 @@ const initialBlog = {
   content: "",
   image: "",
   readTime: "4 min read",
-  author: "Vertexo Team",
+  author: "Next Life Digital Team",
   featured: false,
 };
 
 export default function AdminDashboard() {
   const navigate = useNavigate();
-  const token = localStorage.getItem("vertexo_admin_token") || "";
+  const token = localStorage.getItem("nld_admin_token") || "";
   const [blogs, setBlogs] = useState([]);
   const [enquiries, setEnquiries] = useState([]);
   const [selectedDate, setSelectedDate] = useState("");
@@ -128,7 +128,7 @@ export default function AdminDashboard() {
       content: blog.content,
       image: blog.image || "",
       readTime: blog.readTime || "4 min read",
-      author: blog.author || "Vertexo Team",
+      author: blog.author || "Next Life Digital Team",
       featured: Boolean(blog.featured),
     });
     setStatus({ type: "idle", message: "" });
@@ -184,7 +184,7 @@ export default function AdminDashboard() {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("vertexo_admin_token");
+    localStorage.removeItem("nld_admin_token");
     navigate("/admin");
   };
 

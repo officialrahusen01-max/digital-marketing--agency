@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#0a0a0f",
+        ink: "#050607",
         cream: "#f3f0ff",
         coral: "rgb(0 221 204)",
         mist: "#a29db5",
@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         sans: ["Helvetica Neue", "Arial", "sans-serif"],
         display: ["Georgia", "serif"],
+        brand: ["Roboto", "Helvetica Neue", "Arial", "sans-serif"],
       },
       keyframes: {
         "soft-pulse": {

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { services } from "../data/services.js";
+import { site, whatsappLink } from "../config/site.js";
 
 const API_BASE_URL = (import.meta.env.VITE_API_URL || "http://localhost:5000").replace(/\/$/, "");
 
@@ -43,13 +45,13 @@ export default function EnquiryForm() {
 
       setStatus({
         type: "success",
-        message: "Your enquiry has been submitted successfully. We will contact you soon.",
+        message: `Thank you! Your enquiry has reached ${site.name}. We will get back to you within one working day.`,
       });
       setFormData(initialForm);
     } catch (error) {
       setStatus({
         type: "error",
-        message: error.message || "Something went wrong. Please try again.",
+        message: "We couldn’t send your enquiry right now. Please message us on WhatsApp instead — it reaches the same team.",
       });
     } finally {
       setIsSubmitting(false);
@@ -115,12 +117,10 @@ export default function EnquiryForm() {
               required
               className="rounded-full border border-cream/10 bg-[#17181b] px-4 py-3 text-base text-cream focus:border-coral focus:outline-none"
             >
-              <option value="Digital Marketing">Digital Marketing</option>
-              <option value="SEO">SEO</option>
-              <option value="Social Media Marketing">Social Media Marketing</option>
-              <option value="Google Ads">Google Ads</option>
-              <option value="Website Development">Website Development</option>
-              <option value="Brand Strategy">Brand Strategy</option>
+              {services.map((service) => (
+                <option key={service.id} value={service.title}>{service.title}</option>
+              ))}
+              <option value="Not sure yet">Not sure yet</option>
             </select>
           </label>
 
@@ -158,9 +158,23 @@ export default function EnquiryForm() {
             </button>
 
             {status.message && (
-              <p className={status.type === "success" ? "text-sm text-coral" : "text-sm text-red-300"}>
-                {status.message}
-              </p>
+              <div className="flex flex-col gap-3 sm:items-end sm:text-right">
+                <p role="status" className={status.type === "success" ? "text-sm text-coral" : "text-sm text-red-300"}>
+                  {status.message}
+                </p>
+                {status.type === "error" && (
+                  <a
+                    href={whatsappLink(
+                      `Hi ${site.name}, I'd like a quote.\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nService: ${formData.service}\nBudget: ${formData.budget}\nDetails: ${formData.message}`,
+                    )}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex w-fit items-center gap-2 rounded-full border border-coral px-5 py-2.5 text-[10px] uppercase tracking-[0.16em] text-coral transition hover:bg-coral hover:text-ink"
+                  >
+                    Send on WhatsApp ↗
+                  </a>
+                )}
+              </div>
             )}
           </div>
         </form>

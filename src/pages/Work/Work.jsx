@@ -1,3 +1,4 @@
+import { mailto } from "../../config/site.js";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { projects } from "../../data/projects.js";
@@ -16,15 +17,15 @@ export default function Work() {
         <div className="mx-auto max-w-[1600px]">
           <p className="mb-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.24em] text-mist">
             <span className="h-2 w-2 rounded-full bg-coral shadow-[0_0_16px_rgb(0_221_204)]" />
-            03 / Vertexo projects
+            03 / Next Life Digital projects
           </p>
           <h1 id="work-page-title" className="max-w-[1200px] text-[clamp(4rem,10vw,10rem)] font-medium leading-[0.82] tracking-[-0.085em]">
-            Reach your <em className="font-display font-normal text-coral">digital peak.</em>
+            Work that gets <em className="font-display font-normal text-coral">results.</em>
           </h1>
           <div className="mt-12 grid gap-10 border-t border-cream/15 pt-6 md:grid-cols-[0.55fr_1fr] md:gap-16">
             <p className="text-[10px] uppercase tracking-[0.18em] text-mist">Identity / Experience / Growth</p>
             <p className="max-w-2xl text-xl leading-8 text-cream/75 sm:text-2xl sm:leading-9">
-              Vertexo helps brands reach their digital peak through sharper technology, marketing and innovation.
+              Next Life Digital helps brands grow with sharper marketing, better websites and campaigns that are measured on results.
             </p>
           </div>
         </div>
@@ -66,7 +67,7 @@ export default function Work() {
         <div className="mx-auto max-w-[1600px]">
           <p className="mb-8 text-[10px] uppercase tracking-[0.2em]">Have a challenge worth solving?</p>
           <h2 id="work-cta-title" className="max-w-5xl text-[clamp(3.5rem,8vw,9rem)] leading-[0.84] tracking-[-0.08em]">Your next best case study starts here.</h2>
-          <a href="mailto:officialrahusen01@gmail.com" className="mt-10 inline-flex items-center gap-5 rounded-full bg-ink px-6 py-4 text-xs uppercase tracking-[0.14em] text-cream transition duration-500 hover:-translate-y-1 hover:bg-cream hover:text-ink">
+          <a href={mailto("Project enquiry")} className="mt-10 inline-flex items-center gap-5 rounded-full bg-ink px-6 py-4 text-xs uppercase tracking-[0.14em] text-cream transition duration-500 hover:-translate-y-1 hover:bg-cream hover:text-ink">
             Start a conversation <span className="text-lg">↗</span>
           </a>
         </div>

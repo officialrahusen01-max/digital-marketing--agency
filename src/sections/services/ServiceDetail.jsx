@@ -55,7 +55,7 @@ export default function ServiceDetail({ service }) {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.7, delay: 0.1 }} className="rounded-[2rem] bg-ink p-8 text-cream sm:p-10">
-            <p className="text-[10px] uppercase tracking-[0.2em] text-mist">Outcome</p>
+            <p className="text-[10px] uppercase tracking-[0.2em] text-mist">The goal</p>
             <div className="mt-8 text-[clamp(2.8rem,6vw,5rem)] leading-[0.9] tracking-[-0.07em] text-coral">{service.stat}</div>
             <p className="mt-6 max-w-sm text-lg leading-7 text-cream/75">{service.result}</p>
             <div className="mt-10 border-t border-cream/10 pt-6">
@@ -70,8 +70,8 @@ export default function ServiceDetail({ service }) {
             <p className="text-[10px] uppercase tracking-[0.2em] text-ink/55">Ready for the next move?</p>
             <h3 className="mt-4 max-w-2xl text-[clamp(2.5rem,5vw,5.5rem)] leading-[0.88] tracking-[-0.07em]">Let&apos;s make this <em className="font-display font-normal text-coral">useful.</em></h3>
           </div>
-          <a href="/contact" className="inline-flex shrink-0 items-center gap-5 rounded-full bg-ink px-6 py-4 text-xs uppercase tracking-[0.14em] text-cream transition duration-500 hover:-translate-y-1 hover:bg-coral hover:text-ink">
-            Talk to Vertexo <span className="text-lg">↗</span>
+          <a href="/enquirisubmit" className="inline-flex shrink-0 items-center gap-5 rounded-full bg-ink px-6 py-4 text-xs uppercase tracking-[0.14em] text-cream transition duration-500 hover:-translate-y-1 hover:bg-coral hover:text-ink">
+            Talk to Next Life Digital <span className="text-lg">↗</span>
           </a>
         </div>
       </div>

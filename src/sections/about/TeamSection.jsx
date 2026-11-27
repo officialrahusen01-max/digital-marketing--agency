@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
 const team = [
-  { name: "Anika Mehra", role: "Strategy & Partnerships", image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=85" },
-  { name: "Rohan Shah", role: "Creative Direction", image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=85" },
-  { name: "Maya Kapoor", role: "Growth & Performance", image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=85" },
+  { name: "Strategy & SEO", role: "Research, keywords, content", image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=85" },
+  { name: "Design & Development", role: "Websites, apps, brand creative", image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=85" },
+  { name: "Ads & Social", role: "Google Ads, Meta ads, social media", image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=85" },
 ];
 
 export default function TeamSection() {
@@ -12,10 +12,10 @@ export default function TeamSection() {
       <div className="mx-auto max-w-[1600px]">
         <div className="mb-14 flex flex-col justify-between gap-8 border-b border-cream/15 pb-8 sm:flex-row sm:items-end">
           <div>
-            <p className="mb-5 text-[10px] uppercase tracking-[0.2em] text-mist">The people behind the work</p>
+            <p className="mb-5 text-[10px] uppercase tracking-[0.2em] text-mist">The teams behind the work</p>
             <h2 id="team-title" className="text-[clamp(3rem,6vw,7rem)] leading-[0.86] tracking-[-0.08em]">Small team.<br /><em className="font-display font-normal text-coral">Full attention.</em></h2>
           </div>
-          <p className="max-w-xs text-sm leading-6 text-mist">Strategists, makers and optimists working closely with people who care about what they put into the world.</p>
+          <p className="max-w-xs text-sm leading-6 text-mist">Three focused teams under one roof — so your SEO, ads, social and website all work from the same plan.</p>
         </div>
 
         <div className="grid gap-5 md:grid-cols-3">

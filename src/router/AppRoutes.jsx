@@ -13,6 +13,7 @@ import BlogListPage from "../pages/Blog/BlogListPage.jsx";
 import BlogDetailPage from "../pages/Blog/BlogDetailPage.jsx";
 import AdminLogin from "../pages/Admin/AdminLogin.jsx";
 import AdminDashboard from "../pages/Admin/AdminDashboard.jsx";
+import NotFound from "../pages/NotFound.jsx";
 
 export default function AppRoutes() {
   return (
@@ -24,9 +25,7 @@ export default function AppRoutes() {
       <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
       <Route path="/services/seo" element={<SEO />} />
       <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
-      <Route path="/services/google-ads" element={<ServicePage />} />
-      <Route path="/services/web-development" element={<ServicePage />} />
-      <Route path="/services/mobile-app-development" element={<ServicePage />} />
+      <Route path="/services/:serviceId" element={<ServicePage />} />
       <Route path="/careers" element={<InfoPage type="careers" />} />
       <Route path="/contact" element={<InfoPage type="contact" />} />
       <Route path="/enquirisubmit" element={<EnquirySubmit />} />
@@ -37,6 +36,8 @@ export default function AppRoutes() {
       <Route path="/case-studies" element={<InfoPage type="case-studies" />} />
       <Route path="/insights" element={<InfoPage type="insights" />} />
       <Route path="/faqs" element={<InfoPage type="faqs" />} />
+      <Route path="/enquiry" element={<EnquirySubmit />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

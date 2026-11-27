@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo/logo2.png";
+import Logo from "../common/Logo.jsx";
+import { site, mailto, whatsappLink } from "../../config/site.js";
+import { services } from "../../data/services.js";
+
+const linkClass = "transition-colors hover:text-coral";
 
 export default function Footer() {
   return (
@@ -12,83 +16,84 @@ export default function Footer() {
           <div className="max-w-3xl">
             <p className="mb-6 flex items-center gap-3 text-[10px] uppercase tracking-[0.24em] text-coral">
               <span className="h-2 w-2 rounded-full bg-coral shadow-[0_0_18px_rgb(0_221_204)]" />
-              Have a good idea?
+              Ready for the next chapter?
             </p>
             <h2 className="max-w-4xl text-[clamp(3.5rem,9vw,9rem)] font-medium leading-[0.82] tracking-[-0.08em]">
-              Let&apos;s make it <em className="font-display font-normal text-coral">impossible</em> to ignore.
+              Let&apos;s give your brand its <em className="font-display font-normal text-coral">next life.</em>
             </h2>
           </div>
 
           <div className="w-full max-w-md rounded-[1.5rem] border border-coral/30 bg-coral p-6 text-ink shadow-[0_24px_80px_rgb(0_221_204_/_14%)] sm:p-8">
             <p className="mb-7 text-[10px] uppercase tracking-[0.2em] text-ink/60">Start a conversation</p>
             <div className="space-y-3">
-              <a href="tel:+919772609110" className="group flex items-center justify-between border-b border-ink/20 pb-3 text-lg tracking-[-0.03em] transition-transform duration-300 hover:translate-x-2">
-                <span>+91 97726 09110</span>
-                <span aria-hidden="true" className="text-xl transition-transform duration-300 group-hover:rotate-45">↗</span>
-              </a>
-              <a href="tel:+919660439686" className="group flex items-center justify-between border-b border-ink/20 pb-3 text-lg tracking-[-0.03em] transition-transform duration-300 hover:translate-x-2">
-                <span>+91 96604 39686</span>
-                <span aria-hidden="true" className="text-xl transition-transform duration-300 group-hover:rotate-45">↗</span>
-              </a>
-              <a href="mailto:officialrahusen01@gmail.com" className="group flex items-center justify-between gap-4 pt-1 text-sm tracking-[-0.02em] transition-transform duration-300 hover:translate-x-2 sm:text-base">
-                <span className="break-all">officialrahusen01@gmail.com</span>
+              {site.phones.map((phone) => (
+                <a key={phone.href} href={phone.href} className="group flex items-center justify-between border-b border-ink/20 pb-3 text-lg tracking-[-0.03em] transition-transform duration-300 hover:translate-x-2">
+                  <span>{phone.label}</span>
+                  <span aria-hidden="true" className="text-xl transition-transform duration-300 group-hover:rotate-45">↗</span>
+                </a>
+              ))}
+              <a href={mailto("Project enquiry")} className="group flex items-center justify-between gap-4 pt-1 text-sm tracking-[-0.02em] transition-transform duration-300 hover:translate-x-2 sm:text-base">
+                <span className="break-all">{site.email}</span>
                 <span aria-hidden="true" className="shrink-0 text-xl transition-transform duration-300 group-hover:rotate-45">↗</span>
               </a>
             </div>
           </div>
         </div>
 
-        <div className="grid gap-10 border-b border-cream/15 py-10 text-sm sm:grid-cols-2 lg:grid-cols-[1.2fr_repeat(4,1fr)] lg:py-14">
+        <div className="grid gap-10 border-b border-cream/15 py-10 text-sm sm:grid-cols-2 lg:grid-cols-[1.4fr_repeat(4,1fr)] lg:py-14">
           <div>
-            <Link to="/" data-cursor="Home" className="group inline-flex items-center gap-3 text-2xl font-semibold tracking-[-0.07em]">
-              <img src={logo} alt="Vertexo Digital Solutions" className="h-16 w-auto max-w-full transition-transform duration-500 group-hover:scale-105" />
+            <Link to="/" data-cursor="Home" className="group inline-flex" aria-label="Next Life Digital home">
+              <Logo size="md" className="transition-transform duration-500 group-hover:scale-[1.03]" />
             </Link>
-            <p className="mt-5 max-w-xs leading-6 text-mist">Innovation, digital expertise and business growth for brands ready to move forward.</p>
+            <p className="mt-5 max-w-xs leading-6 text-mist">
+              SEO, ads, social, websites and apps — one team that gives growing businesses their next life online.
+            </p>
           </div>
           <div>
             <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-mist">Services</p>
             <div className="flex flex-col items-start gap-3 text-cream/80">
-              <Link to="/services/seo" data-cursor="SEO" className="transition-colors hover:text-coral">SEO</Link>
-              <Link to="/services/google-ads" data-cursor="Google Ads" className="transition-colors hover:text-coral">Google Ads</Link>
-              <Link to="/services/social-media-marketing" data-cursor="Social" className="transition-colors hover:text-coral">Social Media</Link>
-              <Link to="/services/web-development" data-cursor="Web" className="transition-colors hover:text-coral">Web Development</Link>
-              <Link to="/services/mobile-app-development" data-cursor="Mobile" className="transition-colors hover:text-coral">Mobile App Development</Link>
+              {services.map((service) => (
+                <Link key={service.id} to={`/services/${service.id}`} className={linkClass}>
+                  {service.title}
+                </Link>
+              ))}
             </div>
           </div>
           <div>
             <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-mist">Company</p>
             <div className="flex flex-col items-start gap-3 text-cream/80">
-              <Link to="/about" className="transition-colors hover:text-coral">About Us</Link>
-              <Link to="/work" className="transition-colors hover:text-coral">Our Work</Link>
-              <Link to="/careers" className="transition-colors hover:text-coral">Careers</Link>
-              <Link to="/contact" className="transition-colors hover:text-coral">Contact</Link>
+              <Link to="/about" className={linkClass}>About Us</Link>
+              <Link to="/work" className={linkClass}>Our Work</Link>
+              <Link to="/careers" className={linkClass}>Careers</Link>
+              <Link to="/contact" className={linkClass}>Contact</Link>
+              <Link to="/enquirisubmit" className={linkClass}>Free Quote</Link>
             </div>
           </div>
           <div>
             <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-mist">Resources</p>
             <div className="flex flex-col items-start gap-3 text-cream/80">
-              <Link to="/blog" className="transition-colors hover:text-coral">Blog</Link>
-              <Link to="/case-studies" className="transition-colors hover:text-coral">Case Studies</Link>
-              <Link to="/insights" className="transition-colors hover:text-coral">Insights</Link>
-              <Link to="/faqs" className="transition-colors hover:text-coral">FAQs</Link>
+              <Link to="/blog" className={linkClass}>Blog</Link>
+              <Link to="/case-studies" className={linkClass}>Case Studies</Link>
+              <Link to="/insights" className={linkClass}>Insights</Link>
+              <Link to="/faqs" className={linkClass}>FAQs</Link>
             </div>
           </div>
           <div>
             <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-mist">Connect</p>
             <div className="flex flex-col items-start gap-3 text-cream/80">
-              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-coral">Instagram</a>
-              <a href="https://www.linkedin.com/company/vertexo-digital-solution/about/?viewAsMember=true" target="_blank" rel="noreferrer" className="transition-colors hover:text-coral">LinkedIn</a>
-              <a href="https://wa.me/919772609110" target="_blank" rel="noreferrer" className="transition-colors hover:text-coral">WhatsApp</a>
-              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-coral">YouTube</a>
+              <a href={site.social.instagram} target="_blank" rel="noreferrer" className={linkClass}>Instagram</a>
+              <a href={site.social.linkedin} target="_blank" rel="noreferrer" className={linkClass}>LinkedIn</a>
+              <a href={whatsappLink(`Hi ${site.name}, I would like to discuss a project.`)} target="_blank" rel="noreferrer" className={linkClass}>WhatsApp</a>
+              <a href={site.social.youtube} target="_blank" rel="noreferrer" className={linkClass}>YouTube</a>
             </div>
           </div>
         </div>
 
-        <div className="grid gap-3 border-t border-cream/15 pt-6 text-[10px] uppercase tracking-[0.15em] text-mist sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-          <p>Jaipur, India</p>
-          <a href="mailto:officialrahusen01@gmail.com" className="transition-colors hover:text-coral">officialrahusen01@gmail.com</a>
-          <a href="tel:+919772609110" className="transition-colors hover:text-coral">+91 97726 09110</a>
-          <p>© {new Date().getFullYear()} Vertexo Digital Solutions</p>
+        <div className="grid gap-3 pt-6 text-[10px] uppercase tracking-[0.15em] text-mist sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          <p>{site.city}</p>
+          <a href={mailto()} className={`${linkClass} normal-case tracking-normal`}>{site.email}</a>
+          <a href={site.phones[0].href} className={linkClass}>{site.phones[0].label}</a>
+          <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>

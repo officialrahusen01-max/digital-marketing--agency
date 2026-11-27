@@ -1,7 +1,8 @@
 import { motion, useMotionValue, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
-const headlineWords = ["Designing", "the", "future,", "powering", "attention"];
+const headlineWords = ["Give", "your", "brand", "its", "next life."];
 
 const springConfig = { stiffness: 90, damping: 22, mass: 0.7 };
 
@@ -33,40 +34,40 @@ export default function HeroSection() {
         <motion.div initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08, delayChildren: 0.12 } } }}>
           <motion.p variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="mb-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.24em] text-mist">
             <span className="h-2.5 w-2.5 animate-soft-pulse rounded-full bg-coral shadow-[0_0_18px_rgb(0_221_204)]" />
-            Vertexo Digital Solutions / Delhi — Worldwide
+            Next Life Digital / Jaipur — Worldwide
           </motion.p>
 
           <h1 id="hero-title" className="max-w-[1150px] text-[clamp(3.4rem,8.3vw,9.3rem)] font-medium leading-[0.86] tracking-[-0.075em]">
             {headlineWords.map((word, index) => (
               <motion.span key={word} variants={{ hidden: { opacity: 0, y: "100%", rotateX: -70 }, visible: { opacity: 1, y: 0, rotateX: 0 } }} transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }} className={`mr-[0.18em] inline-block origin-bottom ${index === 4 ? "relative font-display font-normal text-coral" : ""}`}>
                 {word}
-                {index === 2 && <br />}
+                {index === 1 && <br />}
                 {index === 4 && <span className="absolute -right-8 -top-5 text-3xl sm:-right-12 sm:-top-8 sm:text-5xl">✦</span>}
               </motion.span>
             ))}
           </h1>
 
           <motion.p variants={{ hidden: { opacity: 0, y: 22 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="mt-9 max-w-lg text-base leading-7 text-mist sm:text-lg">
-            We turn sharp strategy, expressive design and performance marketing into brands people notice, remember and choose.
+            SEO, Google Ads, social media, websites and apps — planned and run by one team, so more of the right people find you, trust you and buy from you.
           </motion.p>
 
           <motion.div variants={{ hidden: { opacity: 0, y: 22 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="mt-10 flex flex-wrap items-center gap-6">
-            <a href="/enquirisubmit" className="group inline-flex min-h-12 items-center gap-5 rounded-full bg-coral px-6 text-xs uppercase tracking-[0.12em] text-ink transition duration-500 hover:-translate-y-1 hover:bg-cream">
+            <Link to="/enquirisubmit" className="group inline-flex min-h-12 items-center gap-5 rounded-full bg-coral px-6 text-xs uppercase tracking-[0.12em] text-ink transition duration-500 hover:-translate-y-1 hover:bg-cream">
               Enquire now
               <span aria-hidden="true" className="text-lg transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
-            </a>
-            <a href="/work" className="group inline-flex min-h-12 items-center gap-5 text-xs uppercase tracking-[0.12em] text-mist transition duration-500 hover:translate-x-1 hover:text-cream">
+            </Link>
+            <Link to="/work" className="group inline-flex min-h-12 items-center gap-5 text-xs uppercase tracking-[0.12em] text-mist transition duration-500 hover:translate-x-1 hover:text-cream">
               Explore our work
               <span aria-hidden="true" className="text-lg transition-transform duration-500 group-hover:translate-y-1">↓</span>
-            </a>
+            </Link>
           </motion.div>
 
           <motion.div variants={{ hidden: { opacity: 0, y: 22 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="mt-12 flex flex-wrap gap-3 text-[10px] uppercase tracking-[0.18em] text-mist">
             {[
-              "Brand strategy",
-              "Paid media",
-              "SEO growth",
-              "Creative systems",
+              "SEO",
+              "Google Ads",
+              "Social media",
+              "Websites & apps",
             ].map((tag) => (
               <span key={tag} className="rounded-full border border-cream/10 bg-white/3 px-3 py-2">
                 {tag}
@@ -87,7 +88,7 @@ export default function HeroSection() {
 
       <div className="relative mx-auto mt-8 flex max-w-[1600px] justify-between border-t border-cream/15 pt-4 text-[10px] uppercase tracking-[0.16em] text-mist">
         <span>01 — 06</span>
-        <span className="hidden sm:inline">Vertexo / Digital solutions</span>
+        <span className="hidden sm:inline">Next Life Digital / Full-service digital agency</span>
         <span>Est. 2024</span>
       </div>
     </section>

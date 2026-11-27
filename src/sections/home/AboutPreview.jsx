@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const stats = [
-  { value: "90+", label: "launches shipped" },
-  { value: "12", label: "markets activated" },
-  { value: "4.8x", label: "avg. ROAS lift" },
+  { value: "6", label: "core digital services" },
+  { value: "1", label: "team for strategy to launch" },
+  { value: "24h", label: "response to every enquiry" },
 ];
 
 export default function AboutPreview() {
@@ -46,10 +46,10 @@ export default function AboutPreview() {
             Built for ambitious brands
           </div>
           <h2 id="about-title" className="max-w-5xl text-[clamp(2.6rem,5.6vw,6.4rem)] leading-[0.92] tracking-[-0.07em]">
-            We make brands feel <em className="font-display font-normal text-coral">alive</em> in the real world.
+            Your business deserves a <em className="font-display font-normal text-coral">next life</em> online.
           </h2>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-ink/70">
-            Vertexo Digital Solutions helps ambitious teams turn technology, marketing and innovation into business growth people can see and measure.
+            Next Life Digital is a Jaipur-based digital marketing and technology agency. We plan, build and run the SEO, ads, social media, websites and apps that help growing businesses get found online and turn that attention into real enquiries.
           </p>
 
           <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center">
@@ -58,10 +58,10 @@ export default function AboutPreview() {
               data-cursor="View"
               className="group inline-flex items-center gap-4 rounded-full bg-ink px-6 py-3 text-[10px] uppercase tracking-[0.18em] text-cream transition duration-500 hover:-translate-y-1 hover:bg-coral hover:text-ink"
             >
-              More about Vertexo
+              More about Next Life Digital
               <span className="text-lg transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
             </Link>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-ink/55">Strategy • Creative • Performance</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-ink/55">Marketing • Design • Technology</span>
           </div>
         </motion.div>
       </div>

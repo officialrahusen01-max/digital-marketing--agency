@@ -43,7 +43,7 @@ export default function Manifesto() {
   const words = statement.split(" ");
 
   return (
-    <section className="relative isolate overflow-hidden bg-night py-20 sm:py-28" aria-label="Our approach">
+    <section className="relative isolate overflow-hidden bg-night pb-16 pt-10 sm:pb-20 sm:pt-14" aria-label="Our approach">
       <div className="absolute left-1/2 top-1/3 -z-10 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-brand-400/10 blur-[140px]" />
       <div className="container-x">
         <div ref={ref} className="mx-auto max-w-4xl text-center">
@@ -58,7 +58,7 @@ export default function Manifesto() {
           </p>
         </div>
 
-        <div className="relative mt-14 grid gap-5 md:grid-cols-3">
+        <div className="relative mt-10 grid gap-5 md:grid-cols-3">
           {/* connector line between pillars */}
           <motion.div
             aria-hidden="true"
